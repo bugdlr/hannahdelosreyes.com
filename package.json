@@ -1,0 +1,29 @@
+{
+  "name": "hannahdelosreyes.com",
+  "version": "1.0.0",
+  "description": "my personal portfolio site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugdlr/hannahdelosreyes.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bugdlr/hannahdelosreyes.com/issues"
+  },
+  "homepage": "https://github.com/bugdlr/hannahdelosreyes.com#readme",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "path": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-rename": "latest",
+    "gulp-watch": "latest",
+    "gulp-connect": "latest",
+    "gulp-open": "latest"
+  }
+}
