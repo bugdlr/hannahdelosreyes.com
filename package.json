@@ -17,13 +17,15 @@
   },
   "homepage": "https://github.com/bugdlr/hannahdelosreyes.com#readme",
   "devDependencies": {
-    "gulp": "latest",
-    "gulp-less": "latest",
-    "path": "latest",
+    "gulp-connect": "latest",
     "gulp-cssmin": "latest",
+    "gulp-less": "latest",
+    "gulp-open": "latest",
     "gulp-rename": "latest",
     "gulp-watch": "latest",
-    "gulp-connect": "latest",
-    "gulp-open": "latest"
+    "path": "latest"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0"
   }
 }
