@@ -50,9 +50,15 @@
 }
 
 .headshot {
-  margin-top: 400px;
-  max-height: 100px;
+  margin-top: 250px;
+  height: 100px;
   text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.headshot img {
+  height: 200px;
 }
 
 @media (min-width: 769px) {
@@ -66,5 +72,9 @@
   .nav-ul {
     width: auto;
     margin: 0;
+  }
+
+  .headshot img {
+    margin-left: 60%;
   }
 }
