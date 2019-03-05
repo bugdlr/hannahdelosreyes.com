@@ -63,8 +63,23 @@
   height: 200px;
 }
 
+.socials {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px;
+  i {
+    padding: 10px;
+    transition: all .3s;
+    &:hover {
+      cursor: pointer;
+      color: purple;
+    }
+  }
+}
+
 .blurb {
-  margin: 120px auto 50px auto;
+  margin: 20px auto;
+  font-size: 22px;
   text-align: center;
   width: 50%;
 }
@@ -85,6 +100,9 @@ h2 {
 
 .tile {
   text-align: center;
+  position: relative;
+  margin: 20px;
+  color: #fff;
   img {
       width: 95%;
       height: auto;
@@ -92,28 +110,75 @@ h2 {
       justify-content: center;
       filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
     }
+  .overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      opacity: 0;
+      width: 99%;
+      height: 99%;
+      top: 0;
+      left: 0px;
+      background-color: rgba(0,0,0,.7);
+      padding: 20px;
+    }
+  &:hover .overlay {
+      opacity: 1;
+      transition: opacity .3s;
+    }
+  p {
+      font-size: 16px;
+      padding: 15px 5px;
+    }
 }
 
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  margin: 5px auto;
+}
+
+.skill {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 5px;
+}
 
 .button {
     color: #FFF;
     display: block;
     background-color: #EFBA4E;
     font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 50%;
+    margin: 10px auto;
     text-align: center;
-    font-style: normal;
     border-radius: 5px;
     border: 1px solid #EFBA4E;
-    transition: all .25s ease-out;
-    opacity: .85;
-    cursor: pointer;
+    &:hover {
+      transition: all .25s ease-out;
+      opacity: .85;
+      cursor: pointer;
+    }
 }
-
 
 .contact-section {
   padding-top: 20px;
   margin-top: 20px;
   background-color: rgba(0,0,0,0.05);
+  width: 100%;
+
 }
 
 .contact-contents {
@@ -197,6 +262,38 @@ h2 {
 
   .contact-contents {
   max-width: 600px;
+  }
+
+  .tile {
+    .overlay {
+      justify-content: center;
+      }
+    p {
+        font-size: 20px;
+        padding: 20px;
+      }
+    }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .skills {
+    margin: -3px;
+    padding-top: 10px;
+  }
+
+  .skill {
+    font-size: 16px;
+    padding: 5px 15px;
+    align-items: center;
+  }
+
+  .button {
+      font-size: 16px;
+      padding: 10px;
+      width: 30%;
+      margin: 30px auto;
   }
 
 }
