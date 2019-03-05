@@ -20,6 +20,8 @@
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
+  position: fixed;
+  z-index: 3;
 }
 
 .nav-contents {
@@ -50,23 +52,26 @@
 }
 
 .headshot {
-  position: absolute;
-  bottom: -5px;
-  right: 25%;
-  height: 100px;
+  padding-top: 310px;
   text-align: center;
-  z-index: 2;
-  overflow: visible;
 }
 
 .headshot img {
   height: 200px;
 }
 
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  white-space: nowrap;
+  font-size: 26px;
+}
+
 .socials {
   font-size: 32px;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   i {
     padding: 10px;
     transition: all .3s;
@@ -75,19 +80,26 @@
       color: purple;
     }
   }
+  a:visited {
+    color: black;
+  }
+}
+
+.about {
+  padding-top: 200px;
 }
 
 .blurb {
-  margin: 20px auto;
+  margin: 0 auto;
   font-size: 22px;
   text-align: center;
-  width: 50%;
+  width: 80%;
 }
 
 h2 {
   text-align: center;
   text-transform: uppercase;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .portfolio {
@@ -105,7 +117,7 @@ h2 {
   color: #fff;
   img {
       width: 95%;
-      height: auto;
+      max-height: 400px;
       margin: 10px auto;
       justify-content: center;
       filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
@@ -234,6 +246,20 @@ h3 {
   padding: 20px;
 }
 
+footer {
+  height: 30px;
+  padding-right: 10px;
+  text-align: right;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  a {
+    font-size: 20px;
+    margin: 5px;
+  }
+}
+
+
 @media (min-width: 769px) {
   .nav-contents {
     display: flex;
@@ -247,8 +273,22 @@ h3 {
     margin: 0;
   }
 
-  .headshot img {
-    margin-left: 60%;
+  .headshot {
+    position: absolute;
+    top: -90px;
+    right: 10%;
+    height: 100px;
+    text-align: center;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  .about {
+    padding-top: 10px;
+    h1 {
+      font-size: 36px;
+      padding: 10px;
+    }
   }
 
   .portfolio {
