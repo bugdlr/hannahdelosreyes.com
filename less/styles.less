@@ -8,7 +8,7 @@
   width: 100vw;
   height: 300px;
   position: relative;
-  top: 0;
+  top: -60px;
   background-image: url("../assets/rsz_rich-tervet-662093-unsplash-min.jpg");
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -19,36 +19,46 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin: 0 auto;
+  margin: 60px auto 0;
   position: fixed;
   z-index: 3;
 }
 
 .nav-contents {
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   width: 100%;
   background: rgba(255,255,255,0.7);
   position: sticky;
-  top: 0;
+  top: 60px;
 }
 
-.brand {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.navbar ul {
+.menu {
   display: flex;
-  justify-content: center;
-  padding: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 3%;
   font-size: 17px;
+  width: 100%;
 }
 
 .navbar li {
-  padding: 10px;
+  padding: 5px 10px;
   list-style-type: none;
   cursor: pointer;
+  width: 120px;
+  text-align: center;
+}
+
+.brand {
+  display: none;
+}
+
+.hamburger-menu {
+  font-size: 28px;
+  color: #444;
+  padding: 6px;
+  padding-right: 5%;
 }
 
 .headshot {
@@ -87,6 +97,9 @@ h1 {
 
 .about {
   padding-top: 200px;
+  p {
+    padding-top: 10px;
+  }
 }
 
 .blurb {
@@ -115,6 +128,7 @@ h2 {
   position: relative;
   margin: 20px;
   color: #fff;
+  max-width: 600px;
   img {
       width: 95%;
       max-height: 400px;
@@ -185,7 +199,7 @@ h3 {
     }
 }
 
-.contact-section {
+.contact {
   padding-top: 20px;
   margin-top: 20px;
   background-color: rgba(0,0,0,0.05);
@@ -247,32 +261,53 @@ h3 {
 }
 
 footer {
-  height: 30px;
-  padding-right: 10px;
+  height: 40px;
+  padding: 10px 15px;
   text-align: right;
   width: 100%;
-  position: fixed;
-  bottom: 0;
   a {
     font-size: 20px;
     margin: 5px;
   }
 }
 
-
-@media (min-width: 769px) {
-  .nav-contents {
+@media (min-width: 1080px) {
+  .navbar {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding: 10px;
     width: 100%;
+    margin: 60px auto 0 auto;
+    position: fixed;
+    z-index: 3;
   }
-  .nav-ul {
+  .brand {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    width: 100%;
+    .hamburger-menu {
+      display: none;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
     width: auto;
     margin: 0;
   }
-
+  .navbar li {
+    padding: 10px;
+    list-style-type: none;
+    cursor: pointer;
+  }
   .headshot {
     position: absolute;
     top: -90px;
@@ -296,15 +331,12 @@ footer {
     margin: 0 auto;
   }
 
-  .tile img {
-    max-width: 600px;
-  }
-
   .contact-contents {
   max-width: 600px;
   }
 
   .tile {
+    max-width: 600px;
     .overlay {
       justify-content: center;
       }
@@ -334,6 +366,11 @@ footer {
       padding: 10px;
       width: 30%;
       margin: 30px auto;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
   }
 
 }
