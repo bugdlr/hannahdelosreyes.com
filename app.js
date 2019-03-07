@@ -13,7 +13,6 @@ menu.addEventListener('click', () => {
 })
 
 body.addEventListener('click', (e) => {
-  console.log(e);
   if (!e.target.closest('.nav-contents')) {
     dropdown.style.display = "none";
   }

@@ -94,12 +94,12 @@
 
     <div class="contact">
       <h2>Contact Me</h2>
-      <div class="contact-contents">
+      <div class="contact-contents" method="POST" role="form" action="/">
         <div class="form">
-          <input class="form-input" type="text" placeholder="Name">
-          <input class="form-input" type="email" placeholder="Email Address">
-          <input class="form-input" type="tel" placeholder="Phone Number">
-          <textarea class="form-input" id="message" placeholder="What can I do for you?"></textarea>
+          <input class="form-input" type="text" name="name" placeholder="Name">
+          <input class="form-input" type="email" name="email" placeholder="Email Address">
+          <input class="form-input" type="tel" name="phone" placeholder="Phone Number">
+          <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
           <input id="submit" type="submit" value="Send">
         </div>
         <p class="contact-instructions">Want to get in touch with me? Feel free to drop me a line anytime.</p>
