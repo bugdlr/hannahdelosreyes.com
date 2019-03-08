@@ -2,7 +2,6 @@
 const menu = document.querySelector('.fa-bars');
 const dropdown = document.querySelector('.menu');
 const body = document.querySelector('body');
-// const nav = document.querySelector('.nav-contents');
 
 menu.addEventListener('click', () => {
   if (dropdown.style.display !== "flex") {
@@ -87,7 +86,6 @@ function contactHighlight() {
   }
 }
 
-// window.addEventListener("scroll", aboutHighlight, false);
 window.addEventListener("scroll", portHighlight, false);
 window.addEventListener("scroll", contactHighlight, false);
 

@@ -93,14 +93,14 @@
 
     <div class="contact">
       <h2>Contact Me</h2>
-      <div class="contact-contents" method="POST" role="form" action="/">
-        <div class="form">
+      <p class="contact-instructions">I am available for hire. I'd love to hear from you!</p>
+      <div class="contact-contents">
+        <form class="form" method="POST" action="/send-email">
           <input class="form-input" type="text" name="name" placeholder="Name">
           <input class="form-input" type="email" name="email" placeholder="Email Address">
           <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
           <button id="submit" type="submit" name="submit"><i class="far fa-envelope"></i> Send</button>
         </div>
-        <p class="contact-instructions">I am available for hire. I'd love to hear from you!</p>
       </div>
     </div>
   </div>

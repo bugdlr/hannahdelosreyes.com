@@ -1,42 +1,44 @@
+"use strict";
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const mailgun = require("mailgun-js");
+
 const app = express();
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
 
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("server is running");
+const api_key = process.env.API_KEY;
+const DOMAIN = process.env.DOMAIN;
+const mg = mailgun({apiKey: api_key, domain: DOMAIN});
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '/', 'index.html'));
 })
 
 // POST route from contact form
-app.post('/', function (req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 27017,
-    secure: true,
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
-    }
-  });
-  mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: process.env.GMAIL_USER,
+app.post('/send-email', function (req, res) {
+  let data;
+  data = {
+    from: "sender@example.com",
+    to: "htdelosreyes8@gmail.com",
     subject: 'New message from contact form at hannahdelosreyes.com',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.message} phone: ${req.body.phone}`
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      console.log("Something went wrong with the contact form.");
-    }
-    else {
-      console.log("Your message was successfully sent!");
-    }
+    mg.messages().send(data, function (error, body) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(body);
+        }
   });
 });
+// app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("server is running");
+})
