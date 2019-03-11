@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hannah De Los Reyes</title>
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="../stylesheets/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,7 +21,7 @@
         </div>
       </header>
       <div class="headshot">
-        <img src="assets/hannah-dark-even-smile-compressor-small.png" alt="headshot of Hannah smiling">
+        <img src="/assets/hannah-dark-even-smile-compressor-small.png" alt="headshot of Hannah smiling">
       </div>
     </div>
 
@@ -38,7 +38,7 @@
     <h2>Personal Projects</h2>
     <div class="portfolio">
       <div class="tile">
-        <img src="assets/investment-calculator-screenshot.png" alt="investment calculator screenshot">
+        <img src="/assets/investment-calculator-screenshot.png" alt="investment calculator screenshot">
          <div class="overlay">
          <h3>Real Estate<br>Investment Calculator</h3>
          <p>a tool to calculate key values for real estate investing</p>
@@ -51,7 +51,7 @@
        </div>
       </div>
       <div class="tile">
-        <img src="assets/tetris-thumbnail.png" alt="tetris screenshot">
+        <img src="/assets/tetris-thumbnail.png" alt="tetris screenshot">
         <div class="overlay">
           <h3>Tetris</h3>
           <p>a desktop browser version of the classic game</p>
@@ -64,10 +64,10 @@
         </div>
       </div>
       <div class="tile">
-        <img src="assets/Dr-Nick-screenshot.png" alt="Dr.Nick screenshot">
+        <img src="/assets/Dr-Nick-screenshot.png" alt="Dr.Nick screenshot">
         <div class="overlay">
           <h3>Business Website</h3>
-          <p>a bootstrap driven brochure for a psychologist's private practice</p>
+          <p>a bootstrap driven brochure for a psychologist's private&nbsppractice</p>
           <div class="skills">
             <div class="skill">Bootstrap</div>
             <div class="skill">HTML</div>
@@ -77,10 +77,10 @@
         </div>
       </div>
       <div class="tile">
-        <img src="assets/quickdraw-trainer-thumbnail.png" alt="quickdraw trainer screenshot">
+        <img src="/assets/quickdraw-trainer-thumbnail.png" alt="quickdraw trainer screenshot">
         <div class="overlay">
           <h3>Quickdraw Trainer</h3>
-          <p>a web app to generate a start signal for use in firearms training</p>
+          <p>a web app to generate a start signal for use in firearms&nbsptraining</p>
           <div class="skills">
             <div class="skill">HTML</div>
             <div class="skill">JavaScript</div>
@@ -91,15 +91,16 @@
     </div>
   </div>
 
-    <div class="contact">
-      <h2>Contact Me</h2>
-      <p class="contact-instructions">I am available for hire. I'd love to hear from you!</p>
-      <div class="contact-contents">
-        <form class="form" method="POST" action="/send-email">
-          <input class="form-input" type="text" name="name" placeholder="Name">
-          <input class="form-input" type="email" name="email" placeholder="Email Address">
-          <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
-          <button id="submit" type="submit" name="submit"><i class="far fa-envelope"></i> Send</button>
+      <div class="contact">
+        <h2>Contact Me</h2>
+         <p class="contact-instructions">Want to get in touch with me? Feel free to drop me a line anytime.</p>
+        <div class="contact-contents">
+          <form class="form" action="/send-email" method="POST">
+            <input class="form-input" type="text" name="name" placeholder="Name">
+            <input class="form-input" type="email" name="email" placeholder="Email Address">
+            <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
+            <button id="submit" type="submit" name="submit"><i class="far fa-envelope"></i> Send</button>
+          </form>
         </div>
       </div>
     </div>
@@ -112,5 +113,6 @@
 
 
   <script src="app.js" charset="utf-8"></script>
+  <script src="server.js" charset="utf-8" type="module"></script>
   </body>
 </html>

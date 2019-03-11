@@ -29,12 +29,12 @@
   text-transform: uppercase;
   width: 100%;
   background: rgba(255,255,255,0.7);
-  position: sticky;
   top: 60px;
 }
 
 .menu {
   display: flex;
+  color: black;
   flex-direction: column;
   align-items: flex-end;
   padding-right: 3%;
@@ -61,6 +61,10 @@
   padding-right: 5%;
 }
 
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
 .headshot {
   padding-top: 310px;
   text-align: center;
@@ -82,24 +86,28 @@ h1 {
   font-size: 32px;
   text-align: center;
   padding: 10px;
-  i {
-    padding: 10px;
-    transition: all .3s;
-    &:hover {
-      cursor: pointer;
-      color: purple;
-    }
   }
-  a:visited {
+
+.socials a:visited {
     color: black;
   }
+
+.socials i {
+    padding: 10px;
+    transition: all .3s;
+}
+
+.social:hover {
+    cursor: pointer;
+    color: purple;
 }
 
 .about {
-  padding-top: 160px;
-  p {
+  padding-top: 200px;
+}
+
+.about p {
     padding-top: 10px;
-  }
 }
 
 .blurb {
@@ -129,14 +137,17 @@ h2 {
   margin: 20px;
   color: #fff;
   max-width: 600px;
-  img {
+}
+
+.tile img {
       width: 95%;
       max-height: 400px;
       margin: 10px auto;
       justify-content: center;
       filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
-    }
-  .overlay {
+}
+
+.tile .overlay {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -148,16 +159,16 @@ h2 {
       left: 0px;
       background-color: rgba(0,0,0,.7);
       padding: 20px;
-    }
-  &:hover .overlay {
+}
+.tile:hover .overlay {
       opacity: 1;
       transition: opacity .3s;
-    }
-  p {
+}
+
+.tile p {
       font-size: 16px;
       padding: 15px 5px;
-    }
-}
+ }
 
 h3 {
   font-size: 18px;
@@ -192,11 +203,12 @@ h3 {
     text-align: center;
     border-radius: 5px;
     border: 1px solid #EFBA4E;
-    &:hover {
+}
+
+.button:hover {
       transition: all .25s ease-out;
       opacity: .85;
       cursor: pointer;
-    }
 }
 
 .contact {
@@ -237,12 +249,12 @@ h3 {
 #submit {
   font-size: 22px;
   margin: 30px 0;
-  padding: 8px 10px;
+  padding: 5px;
   width: 120px;
   border: 1px solid #555;
   border-radius: 10px;
   background-color: rgba(128,0,128,0.8);
-  color: white;
+  color: #d3d3d3;
   cursor: pointer;
 }
 
@@ -266,9 +278,33 @@ footer {
   padding: 10px 15px;
   text-align: right;
   width: 100%;
-  a {
+}
+
+footer a {
     font-size: 20px;
     margin: 5px;
+}
+
+@media (min-width: 530px) {
+  .tile .overlay {
+    justify-content: center;
+    padding: 40px;
+  }
+  .tile h3 {
+    font-size: 28px;
+  }
+  .tile p {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .skills {
+    margin: -3px;
+    padding-top: 10px;
+  }
+  .skill {
+    font-size: 16px;
+    padding: 5px 15px;
+    align-items: center;
   }
 }
 
@@ -294,10 +330,10 @@ footer {
     align-items: center;
     padding: 10px 50px;
     width: 100%;
-    .hamburger-menu {
+  }
+  .nav-contents .hamburger-menu {
       display: none;
     }
-  }
   .menu {
     display: flex;
     flex-direction: row;
@@ -321,10 +357,11 @@ footer {
 
   .about {
     padding-top: 10px;
-    h1 {
-      font-size: 36px;
-      padding: 10px;
-    }
+  }
+
+  .about h1 {
+    font-size: 36px;
+    padding: 10px;
   }
 
   .portfolio {
@@ -334,32 +371,6 @@ footer {
 
   .contact-contents {
   max-width: 600px;
-  }
-
-  .tile {
-    max-width: 600px;
-    .overlay {
-      justify-content: center;
-      }
-    p {
-        font-size: 20px;
-        padding: 20px;
-      }
-    }
-
-  h3 {
-    font-size: 28px;
-  }
-
-  .skills {
-    margin: -3px;
-    padding-top: 10px;
-  }
-
-  .skill {
-    font-size: 16px;
-    padding: 5px 15px;
-    align-items: center;
   }
 
   .button {
@@ -373,5 +384,4 @@ footer {
     position: fixed;
     bottom: 0;
   }
-
 }

@@ -12,7 +12,7 @@ menu.addEventListener('click', () => {
 })
 
 body.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-contents') && window.innerWidth < 1080) {
+  if (!e.target.closest('.nav-contents')) {
     dropdown.style.display = "none";
   }
 })
@@ -37,6 +37,7 @@ const portfolioSection = document.querySelector('.portfolio');
 const contactSection = document.querySelector('.contact');
 
 
+
 // Menu Scroll
 brand.addEventListener('click', () => {
   window.scrollTo({
@@ -56,6 +57,7 @@ contactNav.addEventListener('click', () => {
 
 // Menu Highlight
 let portPosition = getPosition(portfolioSection);
+let contactPosition = getPosition(contactSection);
 
 function getPosition(el) {
   el = el.getBoundingClientRect();
@@ -86,6 +88,7 @@ function contactHighlight() {
   }
 }
 
+// window.addEventListener("scroll", aboutHighlight, false);
 window.addEventListener("scroll", portHighlight, false);
 window.addEventListener("scroll", contactHighlight, false);
 
