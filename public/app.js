@@ -12,7 +12,7 @@ menu.addEventListener('click', () => {
 })
 
 body.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-contents') && wndow.innerWidth < 1080) {
+  if (!e.target.closest('.nav-contents') && window.innerWidth < 1080) {
     dropdown.style.display = "none";
   }
 })
