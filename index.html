@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hannah De Los Reyes</title>
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </head>
-  <body>
-    <div class="background">
-      <header class="navbar">
-        <div class="nav-contents">
-          <i class="fas fa-bars hamburger-menu"></i>
-          <p class="brand">Hannah De&nbspLos&nbspReyes</p>
-          <ul class="menu">
-            <li id="portfolio-nav">portfolio</a></li>
-            <li id="contact-nav">contact</a></li>
-          </ul>
-        </div>
-      </header>
-      <div class="headshot">
-        <img src="/assets/hannah-dark-even-smile-compressor-small.png" alt="headshot of Hannah smiling">
+<head>
+  <meta charset="utf-8">
+  <meta property='og:title' content='Portfolio Website' />
+  <meta property="og:image" content="..public/assets/portfolioSite.png" />
+  <meta property='og:description' content='some examples of my work' />
+  <meta property='og:url' content='http://www.hannahdelosreyes.com' />
+  <title>Hannah De Los Reyes</title>
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div class="background">
+    <header class="navbar">
+      <div class="nav-contents">
+        <i class="fas fa-bars hamburger-menu"></i>
+        <p class="brand">Hannah De&nbspLos&nbspReyes</p>
+        <ul class="menu">
+          <li id="portfolio-nav">portfolio</a></li>
+          <li id="contact-nav">contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="headshot">
+      <img src="/assets/hannah-dark-even-smile-compressor-small.png" alt="headshot of Hannah smiling">
       </div>
     </div>
 
 
     <div class="about">
       <h1>Hannah De Los Reyes</h1>
-      <p class="blurb">Hi! I'm Hannah, a web developer based in San Diego, CA. </p>
-      <div class="socials">
+      <p class="blurb">Hi! I'm Hannah, a web developer based in Southern California. </p>
+      <div class="socials" id="links">
         <a href="https://github.com/bugdlr" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/hannah-de-los-reyes" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
@@ -39,16 +45,16 @@
     <div class="portfolio">
       <div class="tile" area-haspopup="true">
         <img src="/assets/investment-calculator-screenshot.png" alt="investment calculator screenshot">
-         <div class="overlay">
-         <h3>Real Estate<br>Investment Calculator</h3>
-         <p>a tool to calculate key values for real estate investing</p>
-         <div class="skills">
-           <div class="skill">Gulp</div>
-           <div class="skill">JavaScript</div>
-           <div class="skill">CSS</div>
-         </div>
-         <a href="https://bugdlr.github.io/investment-calculator/" target="_blank" class="button">View Project</a>
-       </div>
+        <div class="overlay">
+          <h3>Real Estate<br>Investment Calculator</h3>
+          <p>a tool to calculate key values for real estate investing</p>
+          <div class="skills">
+            <div class="skill">Gulp</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">CSS</div>
+          </div>
+          <a href="https://bugdlr.github.io/investment-calculator/" target="_blank" class="button">View Project</a>
+        </div>
       </div>
       <div class="tile" area-haspopup="true">
         <img src="/assets/tetris-thumbnail.png" alt="tetris screenshot">
@@ -73,7 +79,7 @@
             <div class="skill">HTML</div>
             <div class="skill">CSS Animations</div>
           </div>
-        <a href ="https://bugdlr.github.io/Dr.Nick/" target="_blank" class="button">View Project</a>
+          <a href ="https://bugdlr.github.io/Dr.Nick/" target="_blank" class="button">View Project</a>
         </div>
       </div>
       <div class="tile" area-haspopup="true">
@@ -86,24 +92,37 @@
             <div class="skill">JavaScript</div>
             <div class="skill">Audio</div>
           </div>
-        <a href ="https://bugdlr.github.io/quickdraw-trainer/" target="_blank" class="button">View Project</a>
+          <a href ="https://bugdlr.github.io/quickdraw-trainer/" target="_blank" class="button">View Project</a>
+        </div>
       </div>
-    </div>
-  </div>
-
-      <div class="contact">
-        <h2>Contact Me</h2>
-         <p class="contact-instructions">Want to get in touch with me? Feel free to drop me a line anytime.</p>
-        <div class="contact-contents">
-          <form class="form" action="/send-email" method="POST">
-            <input class="form-input" type="text" name="name" placeholder="Name">
-            <input class="form-input" type="email" name="email" placeholder="Email Address">
-            <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
-            <button id="submit" type="submit" name="submit"><i class="far fa-envelope"></i> Send</button>
-          </form>
+      <div class="tile" area-haspopup="true">
+        <img src="/assets/quote-generator-screenshot4.png" alt="quote generator screenshot">
+        <div class="overlay">
+          <h3>Random Quote Generator</h3>
+          <p>a web app to generate and tweet a random motivational quote</p>
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Twitter</div>
+          </div>
+          <a href ="https://bugdlr.github.io/quote-generator/" target="_blank" class="button">View Project</a>
         </div>
       </div>
     </div>
+
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <p class="contact-instructions">Want to get in touch with me? Feel free to drop me a line anytime.</p>
+      <div class="contact-contents">
+        <form class="form" action="/send-email" method="POST">
+          <input class="form-input" type="text" name="name" placeholder="Name">
+          <input class="form-input" type="email" name="email" placeholder="Email Address">
+          <textarea class="form-input" id="message" name="message" placeholder="What can I do for you?"></textarea>
+          <button id="submit" type="submit" name="submit"><i class="far fa-envelope"></i> Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
   </div>
 
   <footer>
@@ -114,5 +133,6 @@
 
   <script src="app.js" charset="utf-8"></script>
   <script src="server.js" charset="utf-8" type="module"></script>
-  </body>
+</body>
+
 </html>
