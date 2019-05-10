@@ -2,7 +2,7 @@
   "name": "hannahdelosreyes.com",
   "version": "1.0.0",
   "description": "my personal portfolio site",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -18,19 +18,12 @@
   },
   "homepage": "https://github.com/bugdlr/hannahdelosreyes.com#readme",
   "devDependencies": {
-    "gulp-connect": "latest",
-    "gulp-cssmin": "latest",
-    "gulp-less": "latest",
-    "gulp-open": "latest",
-    "gulp-rename": "latest",
-    "gulp-watch": "latest",
     "path": "latest"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "gulp": "^4.0.0",
-    "mailgun-js": "^0.22.0",
-    "nodemailer": "^5.1.1"
+    "nodemailer": "^5.1.1",
+    "mailgun-js": "^0.22.0"
   }
 }
