@@ -265,7 +265,7 @@ h3 {
   border-bottom: 3px solid red;
 }
 
-&::-webkit-input-placeholder {
+.form__input:-webkit-input-placeholder {
   color: grey;
 }
 
@@ -289,7 +289,7 @@ h3 {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 8rem;
     display: inline-block;
     border-radius: 10rem;
     transition: all .5s;
@@ -298,17 +298,18 @@ h3 {
     border: none;
     cursor: pointer;
     background-color: purple;
+    float: right;
 }
 
 .btn-text,
 .btn-text:link,
 .btn-text:visited {
   color: darkgrey;
-  display: white;
+  display: block;
   text-decoration: none;
   border-bottom: 1px solid purple;
   padding: .8rem 2rem;
-  margin: 1rem;
+  margin: 2rem 0;
   font-size: 22px;
   transition: all .2s;
   position: relative;
