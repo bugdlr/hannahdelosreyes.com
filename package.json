@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "my personal portfolio site",
   "main": "server.js",
-  "homepage": "http://www.hannahdelosreyes.com/",
+  "homepage": "https://github.com/bugdlr/hannahdelosreyes.com#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/bugdlr/hannahdelosreyes.com/issues"
   },
-  "homepage": "https://github.com/bugdlr/hannahdelosreyes.com#readme",
   "devDependencies": {
     "path": "latest"
   },
