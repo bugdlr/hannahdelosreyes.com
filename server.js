@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public'));
+app.use('/static', express.static('public'));
 
 const api_key = process.env.API_KEY;
 const DOMAIN = process.env.DOMAIN;
@@ -48,7 +48,8 @@ app.post('/send-email', function(req, res) {
   });
 });
 
+let port = process.env.PORT || 8080;
 
-app.listen(process.env.PORT, process.env.IP, function() {
-  console.log("server is running");
+app.listen(port, process.env.IP, function() {
+  console.log("server is running on port:" + port);
 })
